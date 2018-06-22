@@ -11,7 +11,7 @@
     <h1>Job List</h1><br />
     <div th:each="job : ${jobs}">
         <a th:href="@{/detail/{id}(id=${job.id})}" role="button">
-            <button class="btn btn-info btn-lg"> Job [[${job.id}]]</button></a>
+            <button class="btn btn-info btn-lg"> Job [[${job.id}]]</button></a><br/><br />
     </div><br />
 </div>
 <th:block th:replace="base :: jslinks"></th:block>

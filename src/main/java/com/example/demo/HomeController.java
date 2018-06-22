@@ -34,7 +34,7 @@ public class HomeController {
         return "redirect:/";
     }
 
-    @RequestMapping("/joblist")
+    @GetMapping("/joblist")
     public String jobList(Model model){
         model.addAttribute("jobs", jobRepository.findAll());
         return "joblist";
