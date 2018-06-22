@@ -1,0 +1,39 @@
+body {
+    background: url("/img/job_pic.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+
+}
+
+.navbar-brand {
+    font-family: 'IM Fell English SC', serif;
+}
+
+.jumbotron-fluid
+{
+    background: url("/img/jumbotron_pic.jpg");
+    background-size: cover;
+    background-position:center;
+}
+
+.text-sm-center {
+    font-family: 'Courgette', cursive;
+    border-radius: 10px;
+    background-color: cornsilk;
+    color: black;
+    padding: 5px;
+}
+
+.carousel-caption {
+	background:rgba(0,0,0,0.65);
+	color: lightyellow;
+}
+
+label {
+    font-weight: bold;
+}
+
+.form {
+    background:rgba(255,255,255,0.75);
+    color: black;
+}

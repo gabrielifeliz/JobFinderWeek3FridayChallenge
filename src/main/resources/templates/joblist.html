@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <th:block th:replace="base :: headstuff"></th:block>
+    <title>Jobs Available</title>
+</head>
+
+<body>
+<nav th:replace="base :: navbar"></nav>
+<div class="container-fluid form">
+    <h1>Job List</h1><br />
+    <div th:each="job : ${jobs}">
+        <a th:href="@{/detail/{id}(id=${job.id})}" role="button">
+            <button class="btn btn-info btn-lg"> Job [[${job.id}]]</button></a>
+    </div><br />
+</div>
+<th:block th:replace="base :: jslinks"></th:block>
+</body>
+</html>

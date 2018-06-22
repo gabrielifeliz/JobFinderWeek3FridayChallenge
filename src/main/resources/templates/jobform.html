@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <th:block th:replace="base :: headstuff"></th:block>
+    <title>Job Form</title>
+</head>
+
+<body>
+<nav th:replace="base :: navbar"></nav>
+<div class="container-fluid form">
+    <h1>Job Form </h1>
+    <form action = "#" th:action="@{/process}" th:object="${job}"
+          method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <div class="col-7 form-group">
+            <label for="jobposition">Position:</label>
+            <input type="text" class="form-control" id="jobposition"
+                   th:field="*{position}"><br />
+            <span th:if="${#fields.hasErrors('position')}"
+                  th:errors="*{position}"></span>
+        </div>
+        <div class="col-7 form-group">
+            <label for="jobcompany">Company:</label>
+            <input type="text" class="form-control" id="jobcompany"
+                   th:field="*{company}"><br />
+            <span th:if="${#fields.hasErrors('company')}"
+                  th:errors="*{company}"></span>
+        </div>
+        <div class="col-7 form-group">
+            <label for="jobrequirements">Requirements:</label>
+            <textarea class="form-control" id="jobrequirements"
+                      rows="3" th:field="*{requirements}"></textarea><br />
+            <span th:if="${#fields.hasErrors('requirements')}"
+                  th:errors="*{requirements}"></span>
+        </div>
+        <div class="col-7 form-group">
+            <label for="jobdesiredskills">Desired Skills:</label>
+            <textarea class="form-control" id="jobdesiredskills"
+                      rows="3" th:field="*{desiredSkills}"></textarea><br />
+            <span th:if="${#fields.hasErrors('desiredSkills')}"
+                  th:errors="*{desiredSkills}"></span>
+        </div>
+
+        <button type="submit" class="btn btn-info btn-lg">Submit</button>
+        <button type="reset" class="btn btn-info btn-lg">Clear</button>
+        <br /><br />
+    </form>
+</div>
+<th:block th:replace="base :: jslinks"></th:block>
+</body>
+</html>
