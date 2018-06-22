@@ -37,3 +37,8 @@ label {
     background:rgba(255,255,255,0.75);
     color: black;
 }
+
+.table-bordered {
+    border-collapse: collapse;
+    width: 75%;
+}
